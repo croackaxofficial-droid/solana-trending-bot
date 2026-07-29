@@ -23,7 +23,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def buy(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "💰 Buy Promotion\n\nContact: @YOUR_USERNAME"
+        "💰 Buy Promotion\n\nContact: @soltrendingsolana_bot"
     )
 
 
@@ -35,7 +35,7 @@ async def trending(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def support(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "🛠 Support: @YOUR_USERNAME"
+        "🛠 Support: @soltrendingsolana_bot"
     )
 
 
