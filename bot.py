@@ -82,16 +82,6 @@ def main():
         raise ValueError("BOT_TOKEN environment variable is missing")
 
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, message))
-    app = Application.builder().token(BOT_TOKEN).build()
-
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("buy", buy))
-    app.add_handler(CommandHandler("trending", trending))
-    app.add_handler(CommandHandler("support", support))
-
-    print("Bot is running...")
-    app.run_polling()
-
 
 if __name__ == "__main__":
     main()
