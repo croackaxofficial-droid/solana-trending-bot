@@ -54,7 +54,6 @@ async def trending(update: Update, context: ContextTypes.DEFAULT_TYPE):
 /buy
 """
     await update.message.reply_text(text)
-    )
 
 
 async def support(update: Update, context: ContextTypes.DEFAULT_TYPE):
