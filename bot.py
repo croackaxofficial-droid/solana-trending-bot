@@ -4,9 +4,10 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(
-        """🚀 Welcome to Solana Trending Bot!
+    text = """
+🚀 Welcome to Solana Trending Bot!
 
 🔥 Fastest way to promote your Solana token.
 
@@ -15,14 +16,23 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 /trending - View packages
 /support - Contact support
 
-💎 Let's make your token trend!"""
+💎 Let's make your token trend!
+"""
+    await update.message.reply_text(text)
+
+
+async def buy(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text(
+        "💰 Buy Promotion\n\nContact: @YOUR_USERNAME"
     )
 
-def main():
-    app = Application.builder().token(BOT_TOKEN).build()
-app.add_handler(CommandHandler("start", start))
-print("Bot is running...")
-app.run_polling()
 
-if __name__ == "__main__":
-    main()
+async def trending(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text(
+        "📈 Trending packages coming soon."
+    )
+
+
+async def support(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text(
+        "🛠 Support: @YOUR_USERNAME"
