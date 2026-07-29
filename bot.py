@@ -28,8 +28,32 @@ async def buy(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 async def trending(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(
-        "📈 Trending packages coming soon."
+    text = """
+📈 SOL TRENDING PACKAGES
+
+🥉 Bronze — $29
+✅ 2 Story Posts
+✅ 1 Permanent Post
+
+🥈 Silver — $59
+✅ 4 Story Posts
+✅ 2 Permanent Posts
+✅ Faster Promotion
+
+🥇 Gold — $99
+✅ Daily Promotion
+✅ Priority Listing
+✅ Maximum Reach
+
+💎 Diamond — $199
+✅ Premium Promotion
+✅ Highest Priority
+✅ Dedicated Support
+
+💰 To order your package:
+/buy
+"""
+    await update.message.reply_text(text)
     )
 
 
