@@ -69,7 +69,13 @@ async def support(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         "🛠 Support: @soltrendingsolana_bot"
     )
-
+async def message(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text(
+        "👋 Please use these commands:\n\n"
+        "/buy - Buy Promotion\n"
+        "/trending - View Packages\n"
+        "/support - Contact Support"
+    )
 
 def main():
     if not BOT_TOKEN:
